@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:4300
+
+###
+# @name getClasss
+GET {{baseUrl}}/classes
+
+###
+# @name getStudents
+GET {{baseUrl}}/students?q=ANn&classId=1
+
+
+###
+# @name createClass
+POST {{baseUrl}}/classes
+Content-Type: application/json
+
+{
+    "name": "Class C1",
+    "year": "2021",
+    "numbers": "32"
+}
+
+###
+PATCH  {{baseUrl}}/students/1
+Content-Type: application/json
+
+{
+   "point": 0,
+    "winStreak": 0,
+    "streakNumber": 0
+    
+}
